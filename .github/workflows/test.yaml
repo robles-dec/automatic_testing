@@ -28,8 +28,6 @@ jobs:
         env:
           repo_token: ${{ secrets.PAT_SECRET }}
         run: |
-          dvc repro 
 
           # Your ML workflow goes here
-
           python test.py
