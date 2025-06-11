@@ -2,6 +2,6 @@ joblib==0.16.0
 
 python-dateutil==2.8.1
 pytz==2020.1
-scipy==1.5.2
+scipy==1.8.0
 six==1.15.0
 threadpoolctl==2.1.0
