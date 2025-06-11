@@ -19,7 +19,7 @@ jobs:
             sudo apt-get install -y software-properties-common
             sudo add-apt-repository universe
             sudo apt-get update
-            sudo apt-get install -y python3-distutils || echo "Skipping python3-distutils installation as it is not available"
+            # sudo apt-get install -y python3-distutils || echo "Skipping python3-distutils installation as it is not available"
             pip install -r requirements.txt
 
       - name: Install Node.js and CML
