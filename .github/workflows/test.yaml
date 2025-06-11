@@ -11,7 +11,7 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.10'
+          python-version: '3.9'
 
       - name: Install requirements
         run: |
@@ -21,7 +21,6 @@ jobs:
 
       - name: Install Node.js and CML
         run: |
-          sudo apt-get update
           sudo apt-get install -y nodejs npm
           npm install -g @dvcorg/cml
           
