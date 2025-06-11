@@ -17,7 +17,7 @@ jobs:
         run: |
             sudo apt update
             sudo apt install -y software-properties-common
-            sudo apt install -y build-essential
+            sudo apt install -y build-essential python3-distutils
             sudo add-apt-repository universe
             # Verify installation
             if ! python3 -c "import distutils.msvccompiler" &>/dev/null; then
