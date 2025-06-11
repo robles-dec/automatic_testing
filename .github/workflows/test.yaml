@@ -18,8 +18,14 @@ jobs:
             sudo apt update
             sudo apt install -y software-properties-common
             sudo add-apt-repository universe
-            sudo apt update
-            sudo apt install -y python3-distutils || echo "Skipping python3-distutils installation as it is not available"
+            sudo apt install -y python3-distutils
+         
+            # Verify installation
+            if ! python3 -c "import distutils.msvccompiler" &>/dev/null; then
+             echo "Error: python3-distutils failed to install."
+             exit 1
+            fi
+
             pip install -r requirements.txt
 
       - name: Install Node.js and CML
